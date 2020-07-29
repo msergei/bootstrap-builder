@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+
+  node:
+    build: .
+    command: sass --style compressed /scss/bootstrap.scss /css/bootstrap.css
+    volumes:
+      - ./bootstrap/scss:/scss
+      - ./css:/css
